@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="CalculatorTest" duration-ms="28" started-at="2019-04-06T15:20:00Z" finished-at="2019-04-06T15:20:00Z">
+    <groups>
+    </groups>
+    <test name="Command line test" duration-ms="28" started-at="2019-04-06T15:20:00Z" finished-at="2019-04-06T15:20:00Z">
+      <class name="CalculatorTest">
+        <test-method status="PASS" signature="multiplyTest()[pri:0, instance:CalculatorTest@6adca536]" name="multiplyTest" duration-ms="9" started-at="2019-04-06T11:20:00Z" finished-at="2019-04-06T11:20:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- multiplyTest -->
+        <test-method status="PASS" signature="sumTest()[pri:0, instance:CalculatorTest@6adca536]" name="sumTest" duration-ms="0" started-at="2019-04-06T11:20:00Z" finished-at="2019-04-06T11:20:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sumTest -->
+      </class> <!-- CalculatorTest -->
+    </test> <!-- Command line test -->
+  </suite> <!-- CalculatorTest -->
+</testng-results>

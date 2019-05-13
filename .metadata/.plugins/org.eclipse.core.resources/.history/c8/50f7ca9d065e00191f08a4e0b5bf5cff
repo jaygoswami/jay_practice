@@ -1,0 +1,59 @@
+package co.pragra.SelXpath;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
+import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Test;
+
+public class NameTest {
+	
+	
+	
+	WebDriver driver=null;
+
+	@BeforeSuite
+	public void setUp() {
+		
+		System.setProperty("webdriver.chrome.driver","C:\\chromedriver1\\chromedriver.exe");
+	
+		driver = new ChromeDriver();
+		driver.get("https://www.sunwing.ca/");
+		
+	}
+	
+	@Test
+	public void testTitle() {
+		
+		
+	
+		Assert.assertTrue(driver.getTitle().contains("Sunwing"));
+	}
+	
+	@Test
+	public void checkLink() {
+		
+			//Contains all the web HTML elements
+		WebElement title= driver.findElement(By.partialLinkText("Things"));
+		
+		link.click();
+		
+		//To check if title has buses
+	Assert.assertEquals(driver.getTitle(),"Last Minute Travel Deals | All inclusive Vacations | Vacation Packages | Discount Travel | Vacation Deals | Sunwing.ca" );
+				
+	}
+	
+	public void destroy() {
+		try {
+			Thread.sleep(10000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		driver.quit();
+		
+	}
+
+}

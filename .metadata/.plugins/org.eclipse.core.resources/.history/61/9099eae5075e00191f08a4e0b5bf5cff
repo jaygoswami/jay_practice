@@ -1,0 +1,61 @@
+package co.pragra.SelXpath;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
+import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Test;
+
+public class XpathTest {
+	
+	
+	WebDriver driver=null;
+
+	@BeforeSuite
+	public void setUp() {
+		
+		System.setProperty("webdriver.chrome.driver","C:\\chromedriver1\\chromedriver.exe");
+	
+		driver = new ChromeDriver();
+		driver.get("https://www.sunwing.ca/");
+		
+	}
+	
+	@Test
+	public void testTitle() {
+		
+		
+	
+		Assert.assertTrue(driver.getTitle().contains("MakeMyTrip"));
+	}
+	
+	
+	@Test
+	public void TagNames() {
+		
+		List<WebElement> allLinks=	driver.findElements(By.tagName("a"));
+		
+		System.out.println("NO OF LINKS:"+allLinks.size());
+		
+		}
+	
+	public void destroy() {
+		try {
+			Thread.sleep(10000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		driver.quit();
+		
+	}
+	
+
+	
+	
+
+}

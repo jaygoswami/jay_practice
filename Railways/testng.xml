@@ -1,0 +1,40 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+
+<suite name="co.pragra.delaytest" verbose="1">
+    <listeners>
+        <listener class-name="co.pragra.delaytest.FunListner">
+
+        </listener>
+    </listeners>
+    
+    <test name="delayTest">
+
+            <classes>
+
+                <class name="co.pragra.delaytest.PragraDelayTest">
+
+                    <parameter name="url" value="https://pragra.co/sel.html">
+
+                    </parameter>
+
+                </class>
+
+                <class name="co.pragra.delaytest.ZoomTest">
+                    <parameter name="url" value="https://zoom.us/contactsales">
+
+                    </parameter>
+
+                </class>
+
+                <class name="co.pragra.delaytest.GrayhoundTest">
+                    <parameter name="url" value="https://www.greyhound.ca">
+
+                    </parameter>
+
+
+                </class>
+            </classes>
+
+    </test>
+</suite>

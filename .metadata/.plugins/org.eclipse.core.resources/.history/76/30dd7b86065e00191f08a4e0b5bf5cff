@@ -1,0 +1,34 @@
+package co.pragra.SelXpath;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.BeforeSuite;
+
+public class TagName {
+	
+
+	WebDriver driver=null;
+
+	@BeforeSuite
+	public void setUp() {
+		
+		System.setProperty("webdriver.chrome.driver","C:\\chromedriver1\\chromedriver.exe");
+	
+		driver = new ChromeDriver();
+		driver.get("https://www.sunwing.ca/");
+		
+	}
+	
+	public void TagName() {
+		
+	List<WebElement> allLinks=	driver.findElements(By.tagName("a"));
+	
+	System.out.println(allLinks.size());
+	
+	}
+
+}

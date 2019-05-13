@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="co.pragra.rogerstest" verbose="1">
+    <parameter name="url" value="https://www.rogers.com/consumer/home"></parameter>
+
+    <test name="rogersTest">
+
+
+        <classes>
+            <class name="co.pragra.rogerstest.RogersTest"></class>
+        </classes>
+
+    </test>
+</suite>

@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="co.pragra.explicit" verbose="1">
+    <parameter name="url" value="https://pragra.co/sel.html"></parameter>
+
+<test name="explicitTest">
+
+
+<classes>
+    <class name="co.pragra.explicit.ExplicitPracticeTest"></class>
+</classes>
+
+</test>
+</suite>
